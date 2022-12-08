@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>js arrey</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <style>
+            [data-box3],.box1{
+                color: blueviolet;
+                text-shadow: 0.1px;
+            }
+            .a1{
+                background:cornflowerblue;
+                color: #fff;
+            }
+        </style>
+        <script>
+        
+        </script>
+    </head>
+    <body>
+        <div class="box1">Hello everyone</div>
+        <div id="box2">Hello everyone</div>
+        <div data-box3="box3">Hello everyone</div>
+
+
+
+
+        <h1 class="heading1 a1"></h1>
+        <p class="p1"></p>
+
+        <hr/>
+
+        <h1 data-heading2="heading3" class="a1"></h1>
+        <p data-p2="p3"></p>
+
+        
+
+        <h1 id="heading4" class="a1"></h1>
+        <p id="p4"></p>
+
+        <hr>
+
+        <h1 class="heading5 a1"></h1>
+        <p class="p5"></p>
+
+        <hr>
+        <script>
+
+            // arrayName[indexNumber]
+
+            // Array index Number always start with 0
+
+            var  _allnews =[ // use in arrey and object
+                {
+                    //1. property:velue
+                    n1h1:'Afternoon brief: BJP now has BJP to compete with in Gujarat election, and all the latest news',
+                    n1p1:"Here are today’s top news, analysis, and opinion. Know all about the latest news and other news updates from Hindustan Times."
+
+                    //2. 
+                },
+                {
+                    //1. property:velue
+                    n2h1:`Election results 2022 LIVE: BJP's record win in Gujarat, Congress bags Himachal`,
+                    n2p1:'Assembly Election Results 2022 Live Updates: The BJP has shown a dominant performance in Gujarat and is looking set to break its 1985 record of 149 seats. Congress, on the other hand, has crossed the majority mark in Himachal Pradesh.'
+
+
+                    //2.
+                },
+                {
+                    n3h1:"Suggest New post-pandemic planning for kids education",
+                    n3p1:"Promising digital solutions for children in South Korea, one of the most educational oriented countries, suggest new pandemic planning for learning DoBrain app for 4 to 9 years-old which increases and strengthens learning ability of children is an award winning app developed through research at Harvard Medical School."
+
+                },
+                {
+                    n4h1:'Five-vehicle pile-up in Karnataka as truck driver brakes to save snake: Report',
+                    n4p1:"A container truck driver stopped abruptly on the Bengaluru - Hyderabad National Highway to avoid running over a snake, causing a five-vehicle pile-up in Karnataka's Chikkaballapur taluk"
+                },
+                {
+                    n5h1:"Madhya Pradesh: BJP corporator beaten to death in Gwalior, one held",
+                    n5p1:'According to the family of the deceased, Kushwaha got involved in a fight with a few of his friends about two months ago over some social issue, however, the matter was resolved'
+
+                },
+                {
+                    n6h1:"Winter superfood: Wonderful benefits of Nolen Gur in winter; lip-smacking recipes to try",
+                    n6p1:`Nolen Gur, extracted from date palm trees, is a storehouse of nutrients and has many benefits. Here are some delectable dishes made of Nolen Gur you can enjoy during winter season to boost immunity.`
+                }
+
+            ]
+        
+        </script>
+
+        <script>
+            // first way in see outpute
+            //innerHTML
+            let y = document.querySelector(".heading1");
+            y.innerHTML=_allnews[0].n1h1;
+
+            document.querySelector('.p1').innerHTML= _allnews[0].n1p1
+        </script>
+
+        <script>
+            //secound way see in outpute
+            //console.log
+            
+
+            // arrayName[indexNumber]
+
+            // Array index Number always start with 0
+            console.log(_allnews[1]["n2h1"]);//first '[]'use in arrey and secound '[]'use in object
+
+            console.log(_allnews[1]["n2p1"]);
+        </script>
+        <script>
+            //third way see in outpute
+            //document.write()
+
+            var x = 'n3p1'
+
+            document.write(_allnews[2].n3h1)
+            document.write(_allnews[2][x])
+        </script>
+        <script>
+            //forth way see outpute
+            //window.alrte
+            let he4 ='n4h1';
+            let pe4 ='n4p1';
+
+            window.alert(_allnews[3][he4]);
+            window.alert(_allnews[3][pe4]);
+        </script>
+        <script>
+            document.querySelector("#heading4").innerHTML=_allnews[3]['n4h1']
+            document.querySelector("#p4").innerHTML=_allnews[3]['n4p1']
+        </script>
+        <script>
+
+            //Expression
+            let l = "n6h1"
+            
+            document.querySelector(".heading5").innerHTML=_allnews[5][l]
+            document.querySelector(".p5").innerHTML=_allnews[5]['n6p1']
+        </script>
+    </body>
+</html>
